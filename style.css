@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-box-sizing: border-box;
+  font-family: 'IBM Plax Sans', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+/* Estrutura do Header */
+.logo-header {
+  display: flex;
+  justify-content: space-between; /* Afasta os 3 blocos principais */
+  align-items: center; /* Alinha tudo verticalmente ao centro */
+  background-color: #e6f0ff; /* Tom de azul bem claro do fundo */
+  padding: 20px 80px; /* Espaçamento interno */
+}
+
+/* Estilização do Logo */
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1c1c1c;
+}
+
+.logo span {
+  color: #0066cc; /* Azul do 'sheba' */
+}
+
+/* Estilização do Menu */
+.menu-navegacao ul {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Espaço entre os links */
+}
+
+.menu-navegacao a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 16px;
+  padding-bottom: 6px;
+  transition: color 0.2s;
+}
+
+/* Link ativo (Home) com a linha embaixo */
+.menu-navegacao a.active {
+  color: #0360D9;
+  font-weight: 600;
+}
+
+/* Estilização dos Botões */
+.autenticacao {
+  display: flex;
+  gap: 15px; /* Espaço entre os dois botões */
+}
+
+.btn {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 28px;
+  border-radius: 50px; /* Deixa as bordas bem arredondadas */
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+
+/* Botão Log in (Vazado) */
+.btn-login {
+  color: #0066cc;
+  border: 1.5px solid #0066cc;
+  background-color: transparent;
+}
+
+.btn-login:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+}
+
+/* Botão Sign up (Preenchido) */
+.btn-signup {
+  color: #ffffff;
+  background-color: #0066cc;
+  border: 1.5px solid #0066cc;
+}
+
+.btn-signup:hover {
+  background-color: #0052a3;
+  border-color: #0052a3;
+}
