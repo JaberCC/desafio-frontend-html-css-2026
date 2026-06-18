@@ -30,10 +30,26 @@
   <section class="hero-section">
     
     <div class="hero-content">
-      <h1>Find & Search Your <span>Favourite</span> Doctor</h1>
+      <h1>Find & Search Your <span>Favourite</span> Doctor</h1> <!--A string Favourite está dentro da tag span para possibilitar estilização diferente do restante do h1-->
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
       
-      <form class="search-bar">
+      <form action="/enviar" method="post">
+        <label for="nome"></label>
+        <select name="nome" id="nome">
+          <option value="" selected disabled hidden>Doctor's Name</option>
+          <option value="a">Dr. Campos</option>
+          <option value="b">Dr. Paul</option>  
+          <option value="c">Dr. Amanda</option>   
+        </select>
+        
+        <label for="local"></label>
+        <select name="local" id="local">
+          <option value="" selected disabled hidden>Location</option>
+          <option value="1">New York</option>
+          <option value="2">Texas</option>
+          <option value="3">Detroit</option>
+        </select>
+        <img src="assets/search-icon.png" alt="Lupa">
         </form>
     </div>
 
@@ -46,6 +62,10 @@
       <div class="stat-item"><h3>100+</h3><p>Doctors</p></div>
       <div class="stat-item"><h3>1M+</h3><p>Active Patients</p></div>
     </div>
+  </section>
+
+  <section class="especialidades">
+    <div id="box-geral"></div> 
 
   </section>
 </main>
