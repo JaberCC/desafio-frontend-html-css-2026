@@ -12,9 +12,6 @@
   align-items: center;            
   padding: 20px 8%;              
   background-color: #e6f0fa; 
-}
-
-
   font-size: 24px;
   font-weight: 800;               /* Deixa o "E-" bem em negrito */
   color: #0c1c2c;                 /* Azul escuro quase preto */
@@ -92,12 +89,12 @@
 }
 
 .container{
-    max-width: 1024px;
-    margin: 0 auto;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .fundo-azul{
-    background-color: blue;
-    border-radius: 10px;
+  background-color: blue;
+  border-radius: 10px;
 }
 
 .hero-section {
@@ -254,11 +251,13 @@
 .stat-item h3 {
   font-size: 36px;
   font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 5px;
 }
 
 .stat-item p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.8); /* Branco levemente transparente para o subtítulo */
 }
 
@@ -274,12 +273,24 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 8%;
-  display: flex;
-  justify-content: space-between; /* Distribui os cards igualmente */
-  gap: 25px;                      /* Espaçamento entre os cards */
-  flex-wrap: wrap;                /* Permite que os cards quebrem de linha em telas menores */
+  text-align: left;
 }
 
+#box-geral h2{
+  font-size: 38px;
+  color: #2c3e50;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px; /* Espaçamento entre os cards */
+  flex-wrap: wrap;  /* Permite que os cards quebrem de linha em telas menores */
+  width: 100%;
+}
 /* --- ESTILIZAÇÃO PADRÃO DOS CARDS (Brancos) --- */
 .card {
   flex: 1;
@@ -304,7 +315,7 @@
   padding: 15px;                  /* Espaço interno para o ícone não tocar na borda do círculo */
   object-fit: contain;
   margin-bottom: 25px;
-}
+ 
 
 /* Títulos dos Cards Normais */
 .card h3 {
