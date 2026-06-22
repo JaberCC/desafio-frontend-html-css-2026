@@ -99,3 +99,224 @@
     background-color: blue;
     border-radius: 10px;
 }
+
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;              /* Permite que a barra de estatísticas vá para a linha de baixo */
+  position: relative;
+  background-color: #e6f0fa;    /* Mesmo fundo azul claro do header */
+  padding: 40px 8% 0 8%;         /* Remove o padding inferior para alinhar com a barra azul */
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Bloco de Texto (Lado Esquerdo) */
+.hero-content {
+  flex: 1;
+  min-width: 300px;             /* Garante responsividade em telas menores */
+  padding-bottom: 100px;        /* Espaço para não bater na barra de estatísticas */
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  color: #0c1c2c;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 500px;             /* Força a quebra de linha igual à imagem */
+}
+
+.hero-content h1 span {
+  color: #0066cc;               /* Destaca a palavra "Favourite" em azul */
+}
+
+.hero-content p {
+  color: #556575;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  max-width: 450px;
+}
+
+/* --- FORMULÁRIO DE BUSCA (Barra Branca) --- */
+.hero-content form {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 10px 10px 25px;
+  border-radius: 40px;          /* Deixa a barra de pesquisa arredondada */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.03); /* Sombra bem leve */
+  max-width: 500px;
+}
+
+.hero-content select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 15px;
+  color: #556575;
+  font-weight: 500;
+  cursor: pointer;
+  padding-right: 20px;
+  /* Remove a seta padrão do navegador (opcional, adicione se quiser customizar) */
+  appearance: none;
+  -webkit-appearance: none;
+  /* Ícone simulando uma seta para os selects */
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%23556575' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* Linha divisória sutil entre os dois selects */
+.hero-content select:first-of-type {
+  border-right: 1px solid #e2e8f0;
+  margin-right: 20px;
+  padding-right: 25px;
+}
+
+/* Botão de Lupa Azul */
+.hero-content form button {
+  background-color: #0066cc;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;          /* Perfeitamente circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-content form button:hover {
+  background-color: #004999;
+}
+
+.hero-content form button img {
+  width: 20px;                  /* Ajusta o tamanho do ícone da lupa */
+  height: 20px;
+  filter: brightness(0) invert(1); /* Deixa o ícone branco caso ele seja preto */
+}
+
+
+/* --- BLOCO DA IMAGEM DO MÉDICO (Lado Direito) --- */
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-self: flex-end;         /* Faz o container alinhar na base */
+  z-index: 1;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: -10px;         /* Ajuste fino para encaixar perfeitamente sobre a barra */
+}
+
+
+/* --- BARRA AZUL DE ESTATÍSTICAS --- */
+.stats-bar {
+  width: 100%;                  /* Força ocupar toda a largura */
+  display: flex;
+  background-color: #0066cc;    /* Fundo azul royal idêntico ao da imagem */
+  padding: 30px 8%;
+  margin-left: -9%;             /* Truque para quebrar a margem externa do pai... */
+  margin-right: -9%;            /* ...e fazer a barra ir de ponta a ponta na tela */
+  width: 118%;                  /* Compensação do recuo das margens */
+  z-index: 3;                   /* Fica por cima da parte inferior da foto do médico */
+  justify-content: flex-start;  /* Alinha os itens à esquerda como no layout */
+  gap: 60px;                    /* Espaçamento entre as estatísticas */
+}
+
+.stat-item {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Linha vertical divisória entre os itens, exceto no último */
+.stat-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -30px;                 /* Posiciona no meio do gap */
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.3); /* Linha branca translúcida */
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8); /* Branco levemente transparente para o subtítulo */
+}
+
+/* Container que envelopa a seção */
+.especialidades {
+  background-color: #ffffff;      /* Altere para a cor de fundo desejada da seção */
+  padding: 60px 0 20px 0;         /* Espaçamento superior e inferior para desgrudar da seção anterior */
+  width: 100%;
+}
+
+/* --- CONTAINER DOS CARDS --- */
+#box-geral {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 8%;
+  display: flex;
+  justify-content: space-between; /* Distribui os cards igualmente */
+  gap: 25px;                      /* Espaçamento entre os cards */
+  flex-wrap: wrap;                /* Permite que os cards quebrem de linha em telas menores */
+}
+
+/* --- ESTILIZAÇÃO PADRÃO DOS CARDS (Brancos) --- */
+.card {
+  flex: 1;
+  min-width: 220px;               /* Largura mínima para manter a responsividade */
+  background-color: #ffffff;
+  border: 1px solid #dbe2e9;      /* Borda fina cinza sutil */
+  border-radius: 20px;            /* Bordas arredondadas do card */
+  padding: 35px 25px;
+  display: flex;
+  flex-direction: column;         /* Alinha os itens de cima para baixo */
+  align-items: flex-start;        /* Alinha os textos e ícones à esquerda */
+  text-align: left;
+  transition: all 0.3s ease;      /* Transição suave para efeitos de hover */
+}
+
+/* Círculo do Ícone (Cards Normais) */
+.card img {
+  width: 60px;
+  height: 60px;
+  background-color: #e6f0fa;      /* Fundo azul bem claro */
+  border-radius: 50%;             /* Transforma o fundo da imagem em círculo */
+  padding: 15px;                  /* Espaço interno para o ícone não tocar na borda do círculo */
+  object-fit: contain;
+  margin-bottom: 25px;
+}
+
+/* Títulos dos Cards Normais */
+.card h3 {
+  font-size: 20px;
+  color: #0c1c2c;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Parágrafos dos Cards Normais */
+.card p {
+  font-size: 14px;
+  color: #556575;
+  line-height: 1.6;
+}
