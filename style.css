@@ -1,7 +1,94 @@
+
+/* Configurações Globais / Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+.logo-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 20px 8%;              
+  background-color: #e6f0fa; 
+}
+
+
+  font-size: 24px;
+  font-weight: 800;               /* Deixa o "E-" bem em negrito */
+  color: #0c1c2c;                 /* Azul escuro quase preto */
+}
+
+.logo span {
+  color: #0066cc;                 /* Azul vibrante para a palavra "sheba" */
+}
+
+.menu-navegacao ul {
+  display: flex;                  /* Coloca os links lado a lado */
+  list-style: none;               /* Remove as bolinhas da lista */
+  gap: 30px;                      /* Espaçamento entre cada link */
+}
+
+.menu-navegacao a {
+  text-decoration: none;
+  color: #556575;                 /* Cor cinza azulada para os links */
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse nos links (Opcional, mas melhora a experiência) */
+.menu-navegacao a:hover {
+  color: #0066cc;
+}
+
+/* Destacar o link ativo (Home) igual ao modelo */
+.menu-navegacao li:first-child a {
+  color: #0066cc;
+  border-bottom: 2px solid #0066cc; /* Linha abaixo da palavra "Home" */
+  padding-bottom: 4px;
+}
+
+/* Área dos Botões de Autenticação */
+.autenticacao {
+  display: flex;
+  align-items: center;
+  gap: 15px;                      /* Espaço entre o botão Log in e Sign up */
+}
+
+/* Estilo Base dos Botões */
+.btn {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 28px;             /* Espaçamento interno para dar formato ao botão */
+  border-radius: 25px;            /* Deixa as bordas completamente arredondadas */
+  transition: all 0.3s ease;
+}
+
+/* Botão Log in (Vazado/Borda) */
+.btn-login {
+  color: #0066cc;
+  border: 2px solid #0066cc;      /* Borda azul contornando o texto */
+  background-color: transparent;
+}
+
+.btn-login:hover {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+
+/* Botão Sign up (Preenchido) */
+.btn-signup {
+  color: #ffffff;
+  background-color: #0066cc;     /* Fundo azul vibrante */
+  border: 2px solid #0066cc;     /* Mantém o mesmo tamanho do botão de login */
+}
+
+.btn-signup:hover {
+  background-color: #004999;     /* Escurece levemente ao passar o mouse */
+  border-color: #004999;
 }
 
 .container{
